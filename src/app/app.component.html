@@ -1,0 +1,26 @@
+<div>
+  <li *ngFor = "let i of fruit">{{i}}</li>
+</div>
+   
+<p>
+  {{message}}<br>
+  {{message1}}
+</p>
+<div>
+  <input [(ngModel)] = "inputValue" placeholder="type here">
+  <p>
+    You typed: {{inputValue}}
+  </p>
+</div>
+<div>
+  <input [(ngModel)] = "message" placeholder="type here">
+</div>
+<div>
+  <input type="checkbox"  [(ngModel)]="isChecked" (change) ="doSomething();">
+</div>
+
+<!-- Set checked property based on expression  -->
+<input type="checkbox" [checked]="checkMe == 'Y'"/>
+
+<!-- Set checked property to false to uncheck -->
+<input type="checkbox" [checked]="isChecked"/>
